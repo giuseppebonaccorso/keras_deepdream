@@ -2,6 +2,7 @@
 <img src="https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000"/><br/>
 
 See also: https://github.com/google/deepdream<br/>
+Blog entry: https://www.bonaccorso.eu/2017/07/09/keras-based-deepdream-experiment-based-vgg19/<br/>
 
 This experiment (which is a work in progress) is based on some suggestions provided by the Deepdream team in this [blog post](http://googleresearch.blogspot.ch/2015/06/inceptionism-going-deeper-into-neural.html) but works in a slightly different way. I use a Gaussian Pyramid and average the rescaled results of a layer with the next one. A total variation loss could be employed too, but after some experiments, I've preferred to remove it because of its blur effect.
 

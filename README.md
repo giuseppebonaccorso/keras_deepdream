@@ -19,13 +19,13 @@ See also: https://github.com/google/deepdream<br/>
 <tr>
 <td width="auto">
 <p align="center">
-<img src="https://s3-us-west-2.amazonaws.com/keras-deepdream-demo/berlin_dream.jpg" align="center" height="600" width="338">
+<img src="https://s3-us-west-2.amazonaws.com/keras-deepdream-demo/berlin_dream.jpg" align="center" height="300" width="400">
 </p>
 <p align="center"><b>Cezanne</b></p>
 </td>
 <td width="auto">
 <p align="center">
-<img src="https://s3-us-west-2.amazonaws.com/keras-deepdream-demo/berlin_dream_3.jpg" align="center" height="600" width="338">
+<img src="https://s3-us-west-2.amazonaws.com/keras-deepdream-demo/berlin_dream_3.jpg" align="center" height="300" width="400">
 </p>
 <p align="center"><b>Magritte</b></p>
 </td>
@@ -33,13 +33,13 @@ See also: https://github.com/google/deepdream<br/>
 <tr>
 <td width="auto">
 <p align="center">
-<img src="https://s3-us-west-2.amazonaws.com/keras-deepdream-demo/cinque_terre_dream.jpg" align="center" height="600" width="338">
+<img src="https://s3-us-west-2.amazonaws.com/keras-deepdream-demo/cinque_terre_dream.jpg" align="center" height="300" width="400">
 </p>
 <p align="center"><b>Dalì</b></p>
 </td>
 <td width="auto">
 <p align="center">
-<img src="https://s3-us-west-2.amazonaws.com/keras-deepdream-demo/rome_dream.jpg" align="center" height="600" width="338">
+<img src="https://s3-us-west-2.amazonaws.com/keras-deepdream-demo/rome_dream.jpg" align="center" height="300" width="400">
 </p>
 <p align="center"><b>Matisse</b></p>
 </td>

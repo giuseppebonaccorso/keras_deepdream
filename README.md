@@ -60,8 +60,8 @@ for i in range(500):
     dw = int((rw - w) / 2)
     zoomed_image = rescaled_image[dh:rh-dh, dw:rw-dw, :]
     processed_image = process_image(preprocess_image(img_as_ubyte(zoomed_image)), iterations=2)
-    imsave(final_image + 'img_' + str(i) + '.jpg', processed_image)
+    imsave(animation_folder + 'img_' + str(i) + '.jpg', processed_image)
 ```
 
-[This is an animation example](https://www.youtube.com/watch?v=ppUhPBMj-z0)
+[This is an animation example with 1500 frames](https://www.youtube.com/watch?v=ppUhPBMj-z0)
 

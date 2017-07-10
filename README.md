@@ -49,18 +49,30 @@ This experiment (which is a work in progress) is based on some suggestions provi
 </table>
 
 ## Creating videos
-It's possible to create amazing videos by zooming into the same image. You can use the snippet below, which assumes to have already processed an existing image:
+It's possible to create amazing videos by zooming into the same image (I've also added an horizontal pan that can be customized). You can use the snippet below, which assumes to have already processed an existing image (processed_image):
 ```
+nb_frames = 3000
+
 h, w = processed_image.shape[0:2]
 
-for i in range(500):
+for i in range(nb_frames):
     rescaled_image = rescale(processed_image, order=5, scale=(1.1, 1.1))
     rh, rw = rescaled_image.shape[0:2]
+    
+    # Compute the cropping limits
     dh = int((rh - h) / 2)
     dw = int((rw - w) / 2)
-    zoomed_image = rescaled_image[dh:rh-dh, dw:rw-dw, :]
+    
+    dh1 = dh if dh % 2 == 0 else dh+1
+    dw1 = dw if dw % 2 == 0 else dw+1
+    
+    # Compute an horizontal pan
+    pan = int(45.0*np.sin(float(i)*np.pi/60))
+    
+    zoomed_image = rescaled_image[dh1:rh-dh, dw1+pan:rw-dw+pan, :]
     processed_image = process_image(preprocess_image(img_as_ubyte(zoomed_image)), iterations=2)
-    imsave(animation_folder + 'img_' + str(i) + '.jpg', processed_image)
+    
+    imsave(final_image + 'img_' + str(i+1) + '.jpg', processed_image)
 ```
 
 [This is an animation example with 1500 frames](https://www.youtube.com/watch?v=ppUhPBMj-z0)

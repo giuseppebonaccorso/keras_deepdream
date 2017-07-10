@@ -49,5 +49,5 @@ This experiment (which is a work in progress) is based on some suggestions provi
 </table>
 
 ## Video example (created with a continuous zoom into the same image)
-[![Watch the video](https://s3-us-west-2.amazonaws.com/keras-deepdream-demo/cinque_terre_dream.jpg)](https://www.youtube.com/embed/ppUhPBMj-z0)
+[![Watch the video]http://img.youtube.com/vi/ppUhPBMj-z0/0.jpg)](https://www.youtube.com/embed/ppUhPBMj-z0)
 

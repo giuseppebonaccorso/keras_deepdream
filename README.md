@@ -48,3 +48,8 @@ This experiment (which is a work in progress) is based on some suggestions provi
 </tr>
 </table>
 
+## Video example (created with a continuous zoom into the same image)
+<div align="center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ppUhPBMj-z0" frameborder="0" allowfullscreen></iframe>
+</div>
+

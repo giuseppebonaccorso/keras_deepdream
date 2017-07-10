@@ -48,6 +48,20 @@ This experiment (which is a work in progress) is based on some suggestions provi
 </tr>
 </table>
 
-## Video example (created with a continuous zoom into the same image)
-[![Watch the video](http://img.youtube.com/vi/ppUhPBMj-z0/0.jpg)](https://www.youtube.com/embed/ppUhPBMj-z0)
+## Creating videos
+It's possible to create amazing videos by zooming into the same image. You can use the snippet below, which assumes to have already processed an existing image:
+```
+h, w = processed_image.shape[0:2]
+
+for i in range(500):
+    rescaled_image = rescale(processed_image, order=5, scale=(1.1, 1.1))
+    rh, rw = rescaled_image.shape[0:2]
+    dh = int((rh - h) / 2)
+    dw = int((rw - w) / 2)
+    zoomed_image = rescaled_image[dh:rh-dh, dw:rw-dw, :]
+    processed_image = process_image(preprocess_image(img_as_ubyte(zoomed_image)), iterations=2)
+    imsave(final_image + 'img_' + str(i) + '.jpg', processed_image)
+```
+
+[This is an animation example](https://www.youtube.com/watch?v=ppUhPBMj-z0)
 

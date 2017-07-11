@@ -75,5 +75,6 @@ for i in range(nb_frames):
     imsave(final_image + 'img_' + str(i+1) + '.jpg', processed_image)
 ```
 
-[This is an animation example with 1500 frames](https://www.youtube.com/watch?v=ppUhPBMj-z0)
+## Sample animation
+[1.1x In-zoom with firth order interpolation and 1500 frames](https://www.youtube.com/watch?v=ppUhPBMj-z0)
 

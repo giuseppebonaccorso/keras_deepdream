@@ -62,6 +62,34 @@ This experiment (which is a work in progress) is based on some suggestions provi
 </tr>
 </table>
 
+## Adding noise
+A good suggestion provided in this [blog post](http://googleresearch.blogspot.ch/2015/06/inceptionism-going-deeper-into-neural.html) is adding some noise to the original image. In this way there's a stronger activation of different filters. I suggest to try different values and/or removing the noise from the processed image. 
+```
+def process_image(image, iterations=2, noise_level=5):
+    # Create bounds
+    bounds = np.ndarray(shape=(image.flatten().shape[0], 2))
+    bounds[:, 0] = -128.0
+    bounds[:, 1] = 128.0
+
+    # Initial value
+    x0 = image.flatten()
+    
+    # Add some noise
+    noise = np.random.randint(-noise_level, noise_level, size=x0.shape)
+    x0 = np.clip(x0 + noise, -128, 128)
+
+    # Perform optimization
+    result = minimize(fun=loss, 
+                      x0=x0, 
+                      args=list(image.shape), 
+                      jac=gradient, 
+                      method='L-BFGS-B', 
+                      bounds=bounds, 
+                      options={'maxiter': iterations})
+    
+    return postprocess_image(np.copy(result.x.reshape(image.shape)))
+```
+
 ## Creating videos
 It's possible to create amazing videos by zooming into the same image (I've also added an horizontal pan that can be customized). You can use the snippet below, which assumes to have already processed an existing image (processed_image):
 ```

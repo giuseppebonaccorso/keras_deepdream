@@ -46,6 +46,20 @@ This experiment (which is a work in progress) is based on some suggestions provi
 <p align="center"><b>Rome</b></p>
 </td>
 </tr>
+<tr>
+<td width="auto">
+<p align="center">
+<img src="https://s3-us-west-2.amazonaws.com/keras-deepdream-demo/Tubinga_Dream.jpg" align="center" height="300" width="400">
+</p>
+<p align="center"><b>Tubingen</b></p>
+</td>
+<td width="auto">
+<p align="center">
+<img src="https://s3-us-west-2.amazonaws.com/keras-deepdream-demo/Taj_Dream.jpg" align="center" height="300" width="400">
+</p>
+<p align="center"><b>Taj Mahal</b></p>
+</td>
+</tr>
 </table>
 
 ## Creating videos
